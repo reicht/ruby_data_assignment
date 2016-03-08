@@ -26,8 +26,6 @@ movies = []
       stars: ["Leonardo DiCaprio", "JGL"]
     }
 
-hundo_club = []
-
 class HundoClub
   def initialize(target_hash)
     @target_hash = target_hash
