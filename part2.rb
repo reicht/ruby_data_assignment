@@ -33,8 +33,10 @@ movies.each do |movie|
   if (movie[:budget] >= 100)
     hundo_club << movie
   end
-  if (movie[:stars] == "Leonardo DiCaprio")
-    caprio_club << movie
+  movie[:stars].each do |actor|
+    if actor == "Leonardo DiCaprio"
+      caprio_club << movie
+    end
   end
 end
 
