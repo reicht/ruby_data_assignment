@@ -26,4 +26,17 @@ movies = []
       stars: ["Leonardo DiCaprio", "JGL"]
     }
 
-puts movies
+hundo_club = []
+caprio_club = []
+
+movies.each do |movie|
+  if (movie[:budget] >= 100)
+    hundo_club << movie
+  end
+  if (movie[:stars] == "Leonardo DiCaprio")
+    caprio_club << movie
+  end
+end
+
+puts hundo_club
+puts caprio_club
