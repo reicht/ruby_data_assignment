@@ -27,7 +27,21 @@ movies = []
     }
 
 hundo_club = []
-caprio_club = []
+
+class HundoClub
+  def initialize(target_hash)
+    @target_hash = target_hash
+    @hundo_club = []
+    @target_hash.each do |movie|
+      if (movie[:budget] >= 100)
+        @hundo_club << movie
+      end
+    end
+  end
+  def run
+    puts @hundo_club
+  end
+end
 
 class CaprioClub
   def initialize(target_hash)
@@ -46,19 +60,9 @@ class CaprioClub
   end
 end
 
-movies.each do |movie|
-  if (movie[:budget] >= 100)
-    hundo_club << movie
-  end
-  movie[:stars].each do |actor|
-    if actor == "Leonardo DiCaprio"
-      caprio_club << movie
-    end
-  end
-end
+
+hundohouse = HundoClub.new(movies)
+hundohouse.run
 
 clubhouse = CaprioClub.new(movies)
 clubhouse.run
-
-puts hundo_club
-puts caprio_club
