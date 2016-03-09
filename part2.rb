@@ -31,7 +31,7 @@ class HundoClub
     @target_hash = target_hash
     @hundo_club = []
     @target_hash.each do |movie|
-      if (movie[:budget] >= 100)
+      if (movie[:budget] <= 100)
         @hundo_club << movie
       end
     end
